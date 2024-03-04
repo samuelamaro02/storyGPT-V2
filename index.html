@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>StoryGPT</title>
+</head>
+<body>
+
+
+
+<main> 
+
+  <div class="wrapper-main"> 
+
+    <div class="title-story"><h1>StoryGPT</h1></div>
+    <div class="container-gpt">
+        <div class="forms-gpt"> 
+          <form id="storyBrandForm">
+            <div id="step1" class="step">
+
+              <div class="header-forms"> 
+                <div class="questions"> 
+                  <h2>1. Personagem</h2>
+                  <p>Quem é o herói da sua história?</p>  
+                </div>
+                <div class="audio-player"> 
+                  <audio class="meuAudio">
+                    <source src="audio/personagem.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="btn-play-pause" type="button"><img src="svg/play.svg" class="playPauseIcon"> Play</button>
+                </div>                
+              </div>
+                <textarea class="input-history" name="character" required></textarea>
+            </div>
+
+
+            <div id="step2" class="step">
+
+              <div class="header-forms"> 
+                <div class="questions"> 
+                  <h2>2. Problema</h2>
+                  <p>Qual problema o herói enfrenta?</p>
+                </div>
+                <div class="audio-player"> 
+                  <audio class="meuAudio">
+                    <source src="audio/problema.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="btn-play-pause" type="button"><img src="svg/play.svg" class="playPauseIcon"> Play</button>
+                </div>
+              </div>
+                <textarea class="input-history" name="problem" required></textarea>
+            </div>
+            <div id="step3" class="step">
+              <div class="header-forms"> 
+                <div class="questions"> 
+                  <h2>3. Guia</h2>
+                  <p>Como sua marca atua como guia?</p>
+                </div>
+                <div class="audio-player"> 
+                  <audio class="meuAudio">
+                    <source src="audio/guia.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="btn-play-pause" type="button"><img src="svg/play.svg" class="playPauseIcon"> Play</button>
+                </div>
+              </div>
+                <textarea class="input-history" name="guide" required></textarea>
+            </div>
+            <div id="step4" class="step">
+              <div class="header-forms"> 
+                <div class="questions"> 
+                  <h2>4. Plano</h2>
+                  <p>Descreva o plano proposto.</p>
+                </div>
+                <div class="audio-player"> 
+                  <audio class="meuAudio">
+                    <source src="audio/plano.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="btn-play-pause" type="button"><img src="svg/play.svg" class="playPauseIcon"> Play</button>
+                </div>
+              </div>
+                <textarea class="input-history" name="plan" required></textarea>
+            </div>
+            <div id="step5" class="step">
+              <div class="header-forms"> 
+                <div class="questions"> 
+                  <h2>5. Chamada para Ação</h2>
+                  <p>Qual é a chamada para ação?</p>
+                </div>
+                <div class="audio-player"> 
+                  <audio class="meuAudio">
+                    <source src="audio/chamada.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="btn-play-pause" type="button"><img src="svg/play.svg" class="playPauseIcon"> Play</button>
+                </div>
+              </div>
+                <textarea class="input-history" name="callToAction" required></textarea>
+            </div>
+            <div id="step6" class="step">
+              <div class="header-forms"> 
+                <div class="questions"> 
+                  <h2>6. Evitar o Fracasso</h2>
+                  <p>Quais são as consequências de não <br> seguir o plano?</p>
+                </div>
+                <div class="audio-player"> 
+                  <audio class="meuAudio">
+                    <source src="audio/fracasso.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="btn-play-pause" type="button"><img src="svg/play.svg" class="playPauseIcon"> Play</button>
+                </div>
+              </div>
+                <textarea class="input-history" name="failure" required></textarea>
+            </div>
+            <div id="step7" class="step">
+              <div class="header-forms"> 
+                <div class="questions"> 
+                  <h2>7. Alcançar o Sucesso</h2>
+                  <p>Como é o sucesso do herói?</p>
+                </div>
+                <div class="audio-player"> 
+                  <audio class="meuAudio">
+                    <source src="audio/sucesso.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="btn-play-pause" type="button"><img src="svg/play.svg" class="playPauseIcon"> Play</button>
+                </div>
+              </div>
+                <textarea class="input-history" name="success" required></textarea>
+            </div>
+            <div class="container-button">
+              <button type="button" onclick="previousStep()" class="btn-forms">Anterior</button>
+              <button type="button" onclick="nextStep()" class="btn-forms">Próximo</button>
+              <button class="input-btn btn-forms" type="submit" value="Enviar">Enviar</button>
+            </div>
+        </form>
+      </div>
+
+      <div class="message-gpt"> 
+        <h2> Sua História</h2>
+        <div class="response-gpt" id="textToCopy"></div>
+        <div class="btn-gpt"> <img src="svg/copy.svg" id="copyButton"></div>
+      </div>
+
+
+
+    </div>
+    
+  </div>
+</main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

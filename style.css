@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Sans+Italic:wght@400;700&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+
+}
+
+
+:root {
+  --surface-50: #FFFFFF;
+  --surface-100: #F7F9FD;
+  --surface-200: #ECEDDE;
+  --surface-300: #CBCFD2;
+  --surface-400: #A7AEB4;
+  --surface-500: #8E979F;
+  --surface-600: #6B767F;
+  --surface-700: #4F575E;
+  --surface-800: #33383D;
+  --surface-900: #202327;
+  --primary-200: #7D49F8; 
+  --secondary-200: #1B6DDF; 
+  --danger-200: #C92929; 
+  --sucess-200: #12825F; 
+  --warning-200: #F2AB53; 
+  --primary-opacity-200: #221A35; 
+  --secondary-opacity-200: #132031; 
+  --dangaer-opacity-200: #2D1515; 
+}
+
+
+
+body{
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.title-story h1{ 
+  background-color: var(--secondary-opacity-200);
+  color: var(--secondary-200);
+  border-color: var(--secondary-200);
+  border: 1px solid; 
+  border-radius: 18px;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+main { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--surface-900);
+ 
+}
+
+.wrapper-main {
+  width: 1140px; 
+  height: 100%;
+  display: flex;
+  flex-direction:column;
+  gap: 20px;
+  padding-top: 25px;
+  margin-bottom: 40px;
+}
+
+.container-gpt {
+  width: 1140px;
+  height: 580px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.forms-gpt { 
+  width: 50%;
+  height: 100%;
+  background-color: var(--surface-800);
+  border-radius: 20px;
+  border: 1px solid var(--surface-600);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.header-forms { 
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+     h2 {
+      color: var(--surface-50);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    
+    p { 
+      color: var(--surface-50);
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    textarea { 
+      width: 100%;
+      height: 350px;
+      background-color: var(--surface-800);
+      border-color: var(--surface-600);
+      color: var(--surface-50); 
+      font-size: 16px;
+      font-weight: 400;
+      border-radius: 20px;
+      resize: none;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    textarea:focus { 
+      outline: none; 
+      border: 1px solid var(--secondary-200); 
+    }
+
+
+    .step {
+      display: none;
+    }
+
+    .step.active {
+      display: block;
+    }
+
+
+    .container-button { 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .btn-forms { 
+      background-color: var(--surface-50);
+      color: var(--surface-800);
+      width: 120px;
+      height: 50px; 
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .btn-forms:hover { 
+      background-color: var(--secondary-200);
+      color: var(--surface-50);
+      transition: 0.3s;    
+    }
+
+    
+.message-gpt { 
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-800);
+  border: 1px solid var(--surface-600);
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.message-gpt h2 {
+  font-size: 34px;
+  margin: 0;
+  height: 77px;
+}
+
+.response-gpt { 
+  width: 100%;
+  height: 392px;
+  border: 1px solid var(--surface-600);
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  color: var(--surface-50); 
+  font-size: 16px;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+  
+  
+  
+
+
+  span { 
+    width: 100%;
+  }
+
+.btn-gpt { 
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-gpt img { 
+  background-color: var(--surface-100);
+  padding: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+
+.danger { 
+  display: inline;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: var(--dangaer-opacity-200);
+  color: var(--danger-200);
+  font-size: bold;
+}
+
+
+
+
+
+
+#meuAudio {
+  display: none;
+}
+/* Estiliza o botão de play/pause */
+.btn-play-pause {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: var(--surface-50);
+  color: var(--surface-800);
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+
+}
